@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { LogoIcon, PencilIcon, PenIcon, RubricIcon, ChatIcon, ChartIcon, TrendIcon, LayersIcon, ScanIcon, UploadIcon, FlagIcon, TargetIcon, CalculatorIcon, GradCapIcon, QuestionIcon, LockIcon, NoShareIcon, CheckCircleIcon, TrashIcon, SparkleIcon, SunIcon } from "./components/icons";
 
 const NAV_LINKS = [
   { href: "#how", label: "How it works" },
@@ -20,7 +21,7 @@ export default function Home() {
       <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top landing-nav">
         <div className="container">
           <a className="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
-            <span className="logo-mark">📄</span> PaperGradeAI
+            <span className="logo-mark"><LogoIcon size={22} /></span> PaperGradeAI
           </a>
           <button className="navbar-toggler" type="button" aria-label="Toggle navigation" onClick={() => setMenuOpen(!menuOpen)}>
             <span className="navbar-toggler-icon"></span>
@@ -91,10 +92,10 @@ export default function Home() {
         <h2 className="text-center">Why teachers choose PaperGradeAI</h2>
         <p className="text-center text-muted">Built for the work that still happens on paper.</p>
         <div className="row g-3 mt-2">
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📝 Grades any paper test</h5><p className="mb-0">MCQ, short answer and maths with step-by-step partial credit, including handwritten papers photographed on a phone.</p></div></div>
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📐 Rubrics + state standards</h5><p className="mb-0">Pre-built STAAR, FSA, Regents and AP rubrics. Pick one when you create a test instead of writing a rubric from scratch.</p></div></div>
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>💬 Feedback that helps students</h5><p className="mb-0">Plain-language feedback for every student, in English and Spanish, so families can follow the next step.</p></div></div>
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📊 Analytics + Reteach</h5><p className="mb-0">Most-missed questions, weakest topics and per-student mastery, plus a printable reteach worksheet for exactly what the class missed.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><PencilIcon size={22} className="card-icon" /> Grades any paper test</h5><p className="mb-0">MCQ, short answer and maths with step-by-step partial credit, including handwritten papers photographed on a phone.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><RubricIcon size={22} className="card-icon" /> Rubrics + state standards</h5><p className="mb-0">Pre-built STAAR, FSA, Regents and AP rubrics. Pick one when you create a test instead of writing a rubric from scratch.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><ChatIcon size={22} className="card-icon" /> Feedback that helps students</h5><p className="mb-0">Plain-language feedback for every student, in English and Spanish, so families can follow the next step.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><ChartIcon size={22} className="card-icon" /> Analytics + Reteach</h5><p className="mb-0">Most-missed questions, weakest topics and per-student mastery, plus a printable reteach worksheet for exactly what the class missed.</p></div></div>
         </div>
       </section>
 
@@ -113,12 +114,13 @@ export default function Home() {
       {/* Explore PaperGradeAI */}
       <section className="explore-section py-5">
         <div className="container position-relative py-4">
-          <span className="explore-deco explore-deco-star" aria-hidden="true">✳️</span>
-          <span className="explore-deco explore-deco-sun" aria-hidden="true">🌻</span>
+          <span className="explore-deco explore-deco-star" aria-hidden="true"><SparkleIcon size={40} /></span>
+          <span className="explore-deco explore-deco-sun" aria-hidden="true"><SunIcon size={44} /></span>
           <h2 className="explore-title text-center">Explore PaperGradeAI</h2>
           <div className="row g-4 mt-4 justify-content-center">
             <div className="col-md-4">
               <Link href="/signup" className="explore-card">
+                <div className="explore-icon"><PencilIcon size={26} /></div>
                 <div className="d-flex justify-content-between align-items-start">
                   <h5>AI Grader</h5>
                   <span className="explore-arrow" aria-hidden="true">→</span>
@@ -128,6 +130,7 @@ export default function Home() {
             </div>
             <div className="col-md-4">
               <Link href="/signup" className="explore-card">
+                <div className="explore-icon"><LogoIcon size={26} /></div>
                 <div className="d-flex justify-content-between align-items-start">
                   <h5>Paper Grader</h5>
                   <span className="explore-arrow" aria-hidden="true">→</span>
@@ -137,6 +140,7 @@ export default function Home() {
             </div>
             <div className="col-md-4">
               <Link href="#team" className="explore-card">
+                <div className="explore-icon"><GradCapIcon size={26} /></div>
                 <div className="d-flex justify-content-between align-items-start">
                   <h5>PaperGradeAI for K-12 Schools &amp; Districts</h5>
                   <span className="explore-arrow" aria-hidden="true">→</span>
@@ -174,9 +178,9 @@ export default function Home() {
       <section className="container py-4">
         <h2>New in V2, ahead of the competition</h2>
         <div className="row g-3 mt-2">
-          <div className="col-md-4"><div className="card h-100 p-3 border-primary"><h5>📊 Class Analytics + Reteach</h5><p className="mb-0">Most-missed questions, weakest topics and per-student mastery, plus a printable reteach worksheet for exactly what the class missed.</p></div></div>
-          <div className="col-md-4"><div className="card h-100 p-3 border-primary"><h5>📐 STAAR / AP rubrics + maths steps</h5><p className="mb-0">Pre-built STAAR, FSA, Regents and AP rubrics, and maths step grading with partial credit, not just the final answer.</p></div></div>
-          <div className="col-md-4"><div className="card h-100 p-3 border-primary"><h5>📄 Split a class PDF + Español</h5><p className="mb-0">Upload one class PDF, get one paper per student in name order. Feedback in English and Spanish for ESL families.</p></div></div>
+          <div className="col-md-4"><div className="card h-100 p-3 border-primary"><h5><ChartIcon size={22} className="card-icon" /> Class Analytics + Reteach</h5><p className="mb-0">Most-missed questions, weakest topics and per-student mastery, plus a printable reteach worksheet for exactly what the class missed.</p></div></div>
+          <div className="col-md-4"><div className="card h-100 p-3 border-primary"><h5><RubricIcon size={22} className="card-icon" /> STAAR / AP rubrics + maths steps</h5><p className="mb-0">Pre-built STAAR, FSA, Regents and AP rubrics, and maths step grading with partial credit, not just the final answer.</p></div></div>
+          <div className="col-md-4"><div className="card h-100 p-3 border-primary"><h5><LayersIcon size={22} className="card-icon" /> Split a class PDF + Español</h5><p className="mb-0">Upload one class PDF, get one paper per student in name order. Feedback in English and Spanish for ESL families.</p></div></div>
         </div>
       </section>
 
@@ -213,10 +217,10 @@ export default function Home() {
         <h2 className="text-center">Can PaperGradeAI read handwritten work?</h2>
         <p className="text-center text-muted">Yes. Paper tests are the whole point, not an afterthought.</p>
         <div className="row g-3 mt-3">
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📱 Scan from anywhere</h5><p className="mb-0">Scan from a phone, a tablet or a school printer. A clear photo is enough to start.</p></div></div>
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📄 Upload the whole class at once</h5><p className="mb-0">Upload one PDF with the entire class set. PaperGradeAI separates it into one paper per student.</p></div></div>
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>✍️ Reads print and messy handwriting</h5><p className="mb-0">Print, cursive and messy handwriting are all read, then scored against your key and rubric.</p></div></div>
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>🚩 Flagged, never guessed</h5><p className="mb-0">Low-confidence reads are highlighted for you to check. Handwriting reads at about 70 to 85 percent, so nothing uncertain becomes a grade on its own.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><ScanIcon size={22} className="card-icon" /> Scan from anywhere</h5><p className="mb-0">Scan from a phone, a tablet or a school printer. A clear photo is enough to start.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><UploadIcon size={22} className="card-icon" /> Upload the whole class at once</h5><p className="mb-0">Upload one PDF with the entire class set. PaperGradeAI separates it into one paper per student.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><PenIcon size={22} className="card-icon" /> Reads print and messy handwriting</h5><p className="mb-0">Print, cursive and messy handwriting are all read, then scored against your key and rubric.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><FlagIcon size={22} className="card-icon" /> Flagged, never guessed</h5><p className="mb-0">Low-confidence reads are highlighted for you to check. Handwriting reads at about 70 to 85 percent, so nothing uncertain becomes a grade on its own.</p></div></div>
         </div>
       </section>
 
@@ -230,9 +234,9 @@ export default function Home() {
             <span className="rubric-chip">STAAR</span><span className="rubric-chip">FSA</span><span className="rubric-chip">Regents</span><span className="rubric-chip">AP</span>
           </div>
           <div className="row g-3 mt-3">
-            <div className="col-md-4"><div className="card h-100 p-4"><h5>📐 Pre-built rubrics</h5><p className="mb-0">Pick a STAAR, FSA, Regents or AP rubric when you create a test, instead of writing a rubric from scratch.</p></div></div>
-            <div className="col-md-4"><div className="card h-100 p-4"><h5>🎯 Rubric plus standards</h5><p className="mb-0">Every answer is scored against your rubric, and the class view shows how students are doing against the standard behind it.</p></div></div>
-            <div className="col-md-4"><div className="card h-100 p-4"><h5>🧮 Maths steps count too</h5><p className="mb-0">Maths answers earn partial credit step by step, not just for the final answer, so working is rewarded the way you would reward it.</p></div></div>
+            <div className="col-md-4"><div className="card h-100 p-4"><h5><RubricIcon size={22} className="card-icon" /> Pre-built rubrics</h5><p className="mb-0">Pick a STAAR, FSA, Regents or AP rubric when you create a test, instead of writing a rubric from scratch.</p></div></div>
+            <div className="col-md-4"><div className="card h-100 p-4"><h5><TargetIcon size={22} className="card-icon" /> Rubric plus standards</h5><p className="mb-0">Every answer is scored against your rubric, and the class view shows how students are doing against the standard behind it.</p></div></div>
+            <div className="col-md-4"><div className="card h-100 p-4"><h5><CalculatorIcon size={22} className="card-icon" /> Maths steps count too</h5><p className="mb-0">Maths answers earn partial credit step by step, not just for the final answer, so working is rewarded the way you would reward it.</p></div></div>
           </div>
         </div>
       </section>
@@ -243,10 +247,10 @@ export default function Home() {
         <h2 className="text-center">Track student growth, not just scores</h2>
         <p className="text-center text-muted">A total tells you who passed. PaperGradeAI shows you what to teach next.</p>
         <div className="row g-3 mt-3">
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📈 Class trends</h5><p className="mb-0">See how the whole class performed across the test, question by question, so patterns stand out at a glance.</p></div></div>
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>👩‍🎓 Per-student mastery</h5><p className="mb-0">Every student gets a mastery level, Mastered, Developing or Needs support, so you know who needs help first.</p></div></div>
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>❓ Most-missed questions</h5><p className="mb-0">The questions the class missed most are listed first, with the percentage who got each one right.</p></div></div>
-          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📝 Reteach priority list</h5><p className="mb-0">Get a short reteach priority list and a printable worksheet for exactly the topics the class missed.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><TrendIcon size={22} className="card-icon" /> Class trends</h5><p className="mb-0">See how the whole class performed across the test, question by question, so patterns stand out at a glance.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><GradCapIcon size={22} className="card-icon" /> Per-student mastery</h5><p className="mb-0">Every student gets a mastery level, Mastered, Developing or Needs support, so you know who needs help first.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><QuestionIcon size={22} className="card-icon" /> Most-missed questions</h5><p className="mb-0">The questions the class missed most are listed first, with the percentage who got each one right.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5><PencilIcon size={22} className="card-icon" /> Reteach priority list</h5><p className="mb-0">Get a short reteach priority list and a printable worksheet for exactly the topics the class missed.</p></div></div>
         </div>
       </section>
 
@@ -270,10 +274,10 @@ export default function Home() {
         <h2 className="text-center">Your student and teacher data is always safe</h2>
         <p className="text-center text-muted">Student work is never used to train AI models. Only you see your students grades and feedback.</p>
         <div className="row g-3 mt-3 text-center">
-          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon">🔒</div><h5 className="mt-2">Data never used to train AI</h5></div></div>
-          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon">🚫</div><h5 className="mt-2">Data never shared or sold</h5></div></div>
-          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon">✅</div><h5 className="mt-2">Full teacher control</h5></div></div>
-          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon">🗑️</div><h5 className="mt-2">Delete data any time</h5></div></div>
+          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon"><LockIcon size={32} /></div><h5 className="mt-2">Data never used to train AI</h5></div></div>
+          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon"><NoShareIcon size={32} /></div><h5 className="mt-2">Data never shared or sold</h5></div></div>
+          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon"><CheckCircleIcon size={32} /></div><h5 className="mt-2">Full teacher control</h5></div></div>
+          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon"><TrashIcon size={32} /></div><h5 className="mt-2">Delete data any time</h5></div></div>
         </div>
         <p className="text-center text-muted mt-4 mb-0">FERPA friendly: we store first name and student ID only, no email, no date of birth. A signed DPA is available, and you can delete a whole class set in one click.</p>
       </section>
@@ -317,7 +321,7 @@ export default function Home() {
         <div className="container">
           <div className="row g-4">
             <div className="col-md-3">
-              <h5>📄 PaperGradeAI</h5>
+              <h5><LogoIcon size={20} className="card-icon" /> PaperGradeAI</h5>
               <p className="small text-muted">Grade a class set of paper tests in 15 minutes, not Sunday night. Built for US K-12 teachers.</p>
             </div>
             <div className="col-md-3">
