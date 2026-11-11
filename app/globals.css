@@ -1,5 +1,15 @@
 body { background: #f8f9fa; }
-.hero { background: linear-gradient(135deg, #0d6efd, #6610f2); color: #fff; }
+.hero { background: linear-gradient(135deg, #0b3d91, #0d6efd 55%, #6610f2); color: #fff; }
+.landing-nav { box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+.logo-mark { font-size: 1.4rem; }
+.hero-card { border: 0; border-radius: 1rem; }
+.step-num { width: 56px; height: 56px; margin: 0 auto; border-radius: 50%; background: #0d6efd; color: #fff; font-size: 1.5rem; font-weight: 700; line-height: 56px; }
+.avatar-circle { width: 72px; height: 72px; margin: 0 auto; border-radius: 50%; background: linear-gradient(135deg, #0d6efd, #6610f2); color: #fff; font-size: 1.4rem; font-weight: 700; line-height: 72px; }
+.cta-band { background: linear-gradient(135deg, #0b3d91, #6610f2); }
+.site-footer { background: #fff; border-top: 1px solid #dee2e6; }
+.site-footer a { color: #0d6efd; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.landing section { scroll-margin-top: 80px; }
 .table-responsive { overflow-x: auto; }
 .badge-low { background: #dc3545; }
 @media print { .no-print { display: none !important; } body { background: #fff; } }
