@@ -33,7 +33,12 @@ body { background: #f8f9fa; color: var(--brand-slate); }
 .landing-nav .navbar-brand { color: var(--brand-navy); }
 .landing-nav .nav-link { color: var(--brand-slate); font-weight: 500; }
 .landing-nav .nav-link:hover { color: var(--brand-indigo); }
-.logo-mark { font-size: 1.4rem; }
+.logo-mark { display: inline-flex; vertical-align: -0.25em; color: var(--brand-indigo); }
+.brand-icon { display: inline-flex; vertical-align: -0.25em; margin-right: .35rem; color: var(--brand-indigo); }
+.navbar-dark .brand-icon { color: #fff; }
+.card-icon { color: var(--brand-indigo); display: inline-flex; vertical-align: -0.35em; margin-right: .45rem; }
+.explore-icon { color: var(--brand-indigo); margin-bottom: .75rem; }
+.badge svg { vertical-align: -0.15em; margin-right: .25rem; }
 .hero-card { border: 0; border-radius: 1rem; }
 .step-num { width: 56px; height: 56px; margin: 0 auto; border-radius: 50%; background: linear-gradient(135deg, var(--brand-indigo), var(--brand-violet)); color: #fff; font-size: 1.5rem; font-weight: 700; line-height: 56px; }
 .avatar-circle { width: 72px; height: 72px; margin: 0 auto; border-radius: 50%; background: linear-gradient(135deg, var(--brand-indigo), var(--brand-violet)); color: #fff; font-size: 1.4rem; font-weight: 700; line-height: 72px; }
@@ -47,7 +52,7 @@ body { background: #f8f9fa; color: var(--brand-slate); }
 .rubric-chip { display: inline-block; background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; border-radius: 999px; padding: .4rem 1.1rem; font-weight: 700; }
 .accuracy-num { font-size: 2rem; font-weight: 800; color: var(--brand-indigo); }
 .trust-badge { border: 1px solid var(--brand-lavender-border); }
-.trust-icon { font-size: 2rem; }
+.trust-icon { color: var(--brand-indigo); display: flex; justify-content: center; }
 
 .site-footer { background: var(--brand-navy); border-top: 1px solid var(--brand-navy); color: #CBD5E1; }
 .site-footer h5, .site-footer h6 { color: #fff; }
@@ -63,9 +68,9 @@ body { background: #f8f9fa; color: var(--brand-slate); }
 .explore-card h5 { font-weight: 700; margin-bottom: .75rem; padding-right: .5rem; }
 .explore-card p { color: var(--brand-slate); }
 .explore-arrow { color: var(--brand-violet); font-size: 1.5rem; font-weight: 700; line-height: 1; flex-shrink: 0; }
-.explore-deco { position: absolute; font-size: 2.5rem; pointer-events: none; }
-.explore-deco-star { left: 0; bottom: 10px; }
-.explore-deco-sun { right: 0; top: 0; }
+.explore-deco { position: absolute; pointer-events: none; }
+.explore-deco-star { left: 0; bottom: 10px; color: var(--brand-indigo); opacity: .45; }
+.explore-deco-sun { right: 0; top: 0; color: var(--brand-amber); opacity: .85; }
 @media (max-width: 767px) { .explore-deco { display: none; } .explore-title { font-size: 2rem; } }
 .table-responsive { overflow-x: auto; }
 .badge-low { background: #dc3545; }
