@@ -108,6 +108,44 @@ export default function Home() {
         <div className="text-center mt-4"><Link className="btn btn-primary btn-lg" href="/signup">Grade 30 papers free</Link></div>
       </section>
 
+      {/* Explore PaperGradeAI */}
+      <section className="explore-section py-5">
+        <div className="container position-relative py-4">
+          <span className="explore-deco explore-deco-star" aria-hidden="true">✳️</span>
+          <span className="explore-deco explore-deco-sun" aria-hidden="true">🌻</span>
+          <h2 className="explore-title text-center">Explore PaperGradeAI</h2>
+          <div className="row g-4 mt-4 justify-content-center">
+            <div className="col-md-4">
+              <Link href="/signup" className="explore-card">
+                <div className="d-flex justify-content-between align-items-start">
+                  <h5>AI Grader</h5>
+                  <span className="explore-arrow" aria-hidden="true">→</span>
+                </div>
+                <p className="mb-0">Grade paper tests against your answer key and rubric with draft scores and detailed feedback.</p>
+              </Link>
+            </div>
+            <div className="col-md-4">
+              <Link href="/signup" className="explore-card">
+                <div className="d-flex justify-content-between align-items-start">
+                  <h5>Paper Grader</h5>
+                  <span className="explore-arrow" aria-hidden="true">→</span>
+                </div>
+                <p className="mb-0">Grade handwritten and printed papers — scan, upload, done.</p>
+              </Link>
+            </div>
+            <div className="col-md-4">
+              <Link href="#team" className="explore-card">
+                <div className="d-flex justify-content-between align-items-start">
+                  <h5>PaperGradeAI for K-12 Schools &amp; Districts</h5>
+                  <span className="explore-arrow" aria-hidden="true">→</span>
+                </div>
+                <p className="mb-0">Consistent grading, class writing data and teacher-approved grades.</p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Free plan includes */}
       <section id="free" className="container py-5">
         <h2 className="text-center">What the Free Plan includes</h2>
