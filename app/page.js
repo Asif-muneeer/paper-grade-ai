@@ -99,16 +99,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works */}
-      <section id="how" className="container py-5">
-        <h2 className="text-center">How it works</h2>
-        <p className="text-center text-muted">The tool reads each paper against your key and rubric, and drafts scores and comments. You review, adjust and approve. You stay in control of every grade.</p>
-        <div className="row g-3 mt-3">
-          <div className="col-md-4"><div className="card h-100 p-4 text-center"><div className="step-num">1</div><h5 className="mt-3">Choose your rubric / key</h5><p className="mb-0">Create a test: subject, class and total marks. Add the MCQ key, a model answer for short answers, and pick a STAAR, FSA, Regents or AP rubric, or write your own.</p></div></div>
-          <div className="col-md-4"><div className="card h-100 p-4 text-center"><div className="step-num">2</div><h5 className="mt-3">Upload student papers</h5><p className="mb-0">Photograph the stack or upload one class PDF. The tool splits a whole-class PDF, one paper per student, in name order. Student name / ID only.</p></div></div>
-          <div className="col-md-4"><div className="card h-100 p-4 text-center"><div className="step-num">3</div><h5 className="mt-3">Review &amp; approve</h5><p className="mb-0">Check the draft grid, fix the flagged reads, approve, then print the mark sheet and export the CSV for your gradebook.</p></div></div>
+      {/* How it works, alternating timeline */}
+      <section id="how" className="how-timeline py-5">
+        <div className="container py-4">
+          <p className="how-eyebrow text-center mb-2">How It Works</p>
+          <h2 className="how-title text-center">How to use PaperGradeAI, step by step</h2>
+          <p className="how-sub text-center mx-auto">The tool reads each paper against your key and rubric, and drafts scores and comments. You review, adjust and approve. You stay in control of every grade.</p>
+          <div className="timeline">
+            <div className="timeline-line" aria-hidden="true"></div>
+            <div className="timeline-item timeline-right">
+              <span className="timeline-num" aria-hidden="true">1</span>
+              <div className="timeline-card">
+                <span className="timeline-step">Step 1</span>
+                <span className="timeline-icon"><RubricIcon size={28} /></span>
+                <h5>Create your test</h5>
+                <p className="mb-0">Add the MCQ answer key, a model answer for short answers, and pick a STAAR, FSA, Regents or AP rubric, or write your own.</p>
+              </div>
+            </div>
+            <div className="timeline-item timeline-left">
+              <span className="timeline-num" aria-hidden="true">2</span>
+              <div className="timeline-card">
+                <span className="timeline-step">Step 2</span>
+                <span className="timeline-icon"><UploadIcon size={28} /></span>
+                <h5>Upload student papers</h5>
+                <p className="mb-0">Photograph the stack or upload one class PDF. It splits automatically, one paper per student, in name order.</p>
+              </div>
+            </div>
+            <div className="timeline-item timeline-right">
+              <span className="timeline-num" aria-hidden="true">3</span>
+              <div className="timeline-card">
+                <span className="timeline-step">Step 3</span>
+                <span className="timeline-icon"><CheckCircleIcon size={28} /></span>
+                <h5>Review and approve</h5>
+                <p className="mb-0">Check the draft grid, fix the flagged low-confidence reads, and approve. You stay in control of every grade.</p>
+              </div>
+            </div>
+            <div className="timeline-item timeline-left">
+              <span className="timeline-num" aria-hidden="true">4</span>
+              <div className="timeline-card">
+                <span className="timeline-step">Step 4</span>
+                <span className="timeline-icon"><ChartIcon size={28} /></span>
+                <h5>Share the results</h5>
+                <p className="mb-0">Print the mark sheet and export the CSV straight into your gradebook, with feedback in English and Spanish.</p>
+              </div>
+            </div>
+          </div>
+          <div className="text-center mt-5">
+            <Link className="btn btn-warning btn-lg how-cta" href="/signup">Grade 30 papers free</Link>
+            <p className="how-note mt-3 mb-0">No card needed. Draft only, never a final grade alone.</p>
+          </div>
         </div>
-        <div className="text-center mt-4"><Link className="btn btn-primary btn-lg" href="/signup">Grade 30 papers free</Link></div>
       </section>
 
       {/* Explore PaperGradeAI */}
