@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { WarningIcon } from "../components/icons";
 export default function Dashboard() {
   const [d, setD] = useState(null);
   useEffect(() => { fetch("/api/stats").then((r) => r.ok ? r.json() : null).then(setD); }, []);
@@ -19,6 +20,6 @@ export default function Dashboard() {
     <h4 className="mt-4">Your tests</h4>
     {d.tests.length === 0 ? <p className="text-muted">No tests yet, create one to start grading.</p> : <div className="list-group">{d.tests.map((t) => <Link key={t.id} className="list-group-item list-group-item-action" href={`/dashboard/tests/${t.id}`}>{t.subject}: {t.className} · {t.questions.length} questions · {t.totalMarks} marks</Link>)}</div>}
     <h4 className="mt-4">Recent papers</h4>
-    <div className="table-responsive"><table className="table table-bordered bg-white"><thead><tr><th>Student</th><th>Score</th><th>Status</th><th></th></tr></thead><tbody>{d.papers.slice(-8).reverse().map((p) => <tr key={p.id}><td>{p.studentName}</td><td>{p.grading ? `${p.grading.total} / ${p.grading.maxTotal}` : "-"}</td><td>{p.status}{p.grading && p.grading.rows.some((r) => r.confidence === "Low") ? " · ⚠️ low-confidence read" : ""}</td><td><a href={`/dashboard/tests/${p.testId}`}>Review</a></td></tr>)}</tbody></table></div>
+    <div className="table-responsive"><table className="table table-bordered bg-white"><thead><tr><th>Student</th><th>Score</th><th>Status</th><th></th></tr></thead><tbody>{d.papers.slice(-8).reverse().map((p) => <tr key={p.id}><td>{p.studentName}</td><td>{p.grading ? `${p.grading.total} / ${p.grading.maxTotal}` : "-"}</td><td>{p.status}{p.grading && p.grading.rows.some((r) => r.confidence === "Low") ? (<span> · <WarningIcon size={14} /> low-confidence read</span>) : null}</td><td><a href={`/dashboard/tests/${p.testId}`}>Review</a></td></tr>)}</tbody></table></div>
   </div>);
 }
