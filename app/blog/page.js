@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ARTICLES } from "./articles";
 
-export const metadata = { title: "Blog — PaperGradeAI", description: "Practical guides for US teachers: grading paper tests faster, rubrics, reteach worksheets and more." };
+export const metadata = { title: "Blog | PaperGradeAI", description: "Practical guides for US teachers: grading paper tests faster, rubrics, reteach worksheets and more." };
 
 export default function BlogIndex() {
   return (
