@@ -4,7 +4,7 @@ import { currentUser } from "@/lib/session";
 import { computeAnalytics } from "@/lib/analytics";
 import { generateReteach } from "@/lib/reteach";
 import { reteachItemsLive, aiMode } from "@/lib/ai";
-// GET /api/tests/[id]/reteach — Reteach worksheet from the 3 most-missed
+// GET /api/tests/[id]/reteach: Reteach worksheet from the 3 most-missed
 // questions. Demo: deterministic templates (lib/reteach.js). Live: OpenAI
 // generates similar practice items, falling back to templates on error.
 export async function GET(req, { params }) {
