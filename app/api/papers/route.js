@@ -8,7 +8,7 @@ import { PLANS } from "@/lib/billing";
 // The file is stored under data/uploads; answers are the teacher-transcribed
 // answers (fallback path that works fully offline in demo mode).
 // SPLIT MODE (V2): mode=split + ONE class PDF + names (one per line) +
-// optional pageRanges ("Ava: 1-2" per line). No real PDF parser is used —
+// optional pageRanges ("Ava: 1-2" per line). No real PDF parser is used,
 // the tool creates one paper per student in list order and stores the page
 // mapping visibly (splitInfo) so the teacher can reassign in review.
 function parseRanges(text, names) {
@@ -46,7 +46,7 @@ export async function POST(req) {
       db.papers.push(paper); return paper;
     });
     writeDB(db);
-    return NextResponse.json({ ok: true, papers, split: true, note: "One paper created per name, in list order. Page ranges are stored on each paper — no PDF pages were cut apart." });
+    return NextResponse.json({ ok: true, papers, split: true, note: "One paper created per name, in list order. Page ranges are stored on each paper, no PDF pages were cut apart." });
   }
   const studentName = String(form.get("studentName") || "").trim();
   if (!studentName) return NextResponse.json({ error: "Student name (or ID) is required." }, { status: 400 });
