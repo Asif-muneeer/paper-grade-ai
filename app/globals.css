@@ -78,3 +78,5 @@ body { background: #f8f9fa; color: var(--brand-slate); }
 .table-responsive { overflow-x: auto; }
 .badge-low { background: #dc3545; }
 @media print { .no-print { display: none !important; } body { background: #fff; } }
+
+/* Logo v1 deployed 2026-11-11 */
