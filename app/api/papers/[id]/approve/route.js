@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { readDB, writeDB } from "@/lib/db";
 import { currentUser } from "@/lib/session";
-// POST { rows? } — teacher approves the draft. Optional edited rows (mark /
+// POST { rows? }: teacher approves the draft. Optional edited rows (mark /
 // recognised answer per question) are applied and the total recomputed.
 // This is the ONLY way a paper becomes "approved" (a result).
 export async function POST(req, { params }) {
