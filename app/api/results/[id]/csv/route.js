@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { readDB } from "@/lib/db";
 import { currentUser } from "@/lib/session";
 // GET CSV for one test: one row per approved/graded paper. Paste straight into
-// Google Classroom / Canvas / a school gradebook — no LMS integration needed.
+// Google Classroom / Canvas / a school gradebook, no LMS integration needed.
 export async function GET(req, { params }) {
   const { user, db } = currentUser();
   if (!user) return NextResponse.json({ error: "Not logged in" }, { status: 401 });
