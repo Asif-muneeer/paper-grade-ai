@@ -57,6 +57,30 @@ body { background: #f8f9fa; color: var(--brand-slate); }
 .trust-badge { border: 1px solid var(--brand-lavender-border); }
 .trust-icon { color: var(--brand-indigo); display: flex; justify-content: center; }
 
+/* Accuracy + Security duo cards */
+.duo-card { border-radius: 1.5rem; padding: 2.5rem; position: relative; display: flex; flex-direction: column; }
+.duo-purple { background: linear-gradient(135deg, var(--brand-violet), var(--brand-indigo)); color: #fff; box-shadow: 0 12px 32px rgba(124, 58, 237, .28); }
+.duo-purple h2 { color: #fff; }
+.duo-purple p { color: rgba(255, 255, 255, .92); }
+.duo-white { background: #fff; border: 1px solid var(--brand-lavender-border); box-shadow: 0 12px 32px rgba(15, 23, 42, .08); }
+.duo-white h2 em { color: var(--brand-violet); font-style: italic; }
+.duo-eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-weight: 700; color: var(--brand-navy); }
+.duo-eyebrow-light { color: rgba(255, 255, 255, .85); }
+.duo-stat { background: #fff; border-radius: 1rem; padding: 1.25rem; height: 100%; }
+.duo-stat-num { font-size: 2.4rem; font-weight: 800; color: var(--brand-violet); line-height: 1.1; }
+.duo-stat p { color: var(--brand-navy); font-size: .95rem; margin-top: .5rem; }
+.duo-link { display: inline-block; font-weight: 700; text-decoration: underline; }
+.duo-link-amber { color: #FCD34D; }
+.duo-link-amber:hover { color: #FDE68A; }
+.duo-link-purple { color: var(--brand-violet); }
+.duo-link-purple:hover { color: var(--brand-indigo); }
+.duo-starburst { position: absolute; top: -20px; right: -8px; pointer-events: none; }
+.duo-checklist li { display: flex; align-items: center; gap: .5rem; padding: .3rem 0; color: var(--brand-navy); font-weight: 500; }
+.duo-checklist svg { color: var(--brand-violet); flex-shrink: 0; }
+.duo-illustration { margin-left: auto; flex-shrink: 0; }
+#security { scroll-margin-top: 80px; }
+@media (max-width: 767px) { .duo-card { padding: 1.75rem; } .duo-stat-num { font-size: 2rem; } .duo-illustration { display: none; } }
+
 .site-footer { background: var(--brand-navy); border-top: 1px solid var(--brand-navy); color: #CBD5E1; }
 .site-footer h5, .site-footer h6 { color: #fff; }
 .site-footer .text-muted { color: #94A3B8 !important; }

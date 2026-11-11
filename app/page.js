@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { LogoIcon, PencilIcon, PenIcon, RubricIcon, ChatIcon, ChartIcon, TrendIcon, LayersIcon, ScanIcon, UploadIcon, FlagIcon, TargetIcon, CalculatorIcon, GradCapIcon, QuestionIcon, LockIcon, NoShareIcon, CheckCircleIcon, TrashIcon, SparkleIcon, SunIcon } from "./components/icons";
+import { LogoIcon, PencilIcon, PenIcon, RubricIcon, ChatIcon, ChartIcon, TrendIcon, LayersIcon, ScanIcon, UploadIcon, FlagIcon, TargetIcon, CalculatorIcon, GradCapIcon, QuestionIcon, LockIcon, NoShareIcon, CheckCircleIcon, CheckIcon, TrashIcon, SparkleIcon, SunIcon } from "./components/icons";
 
 const NAV_LINKS = [
   { href: "#how", label: "How it works" },
@@ -254,32 +254,77 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Accuracy, honestly */}
+      {/* Accuracy and Security, side by side */}
       <section id="accuracy" className="section-alt py-5">
         <div className="container">
-          <p className="eyebrow text-center mb-2">Accuracy, honestly</p>
-          <h2 className="text-center">Grades like a careful teacher, checked by you</h2>
-          <p className="text-center text-muted">No inflated accuracy claims. Here is exactly what the tool does, and where you stay in charge.</p>
-          <div className="row g-3 mt-3 text-center">
-            <div className="col-md-4"><div className="card h-100 p-4"><div className="accuracy-num">Near-100%</div><h5 className="mt-2">Multiple choice</h5><p className="mb-0">MCQ is scored deterministically against your answer key, so a legible answer is marked right every time.</p></div></div>
-            <div className="col-md-4"><div className="card h-100 p-4"><div className="accuracy-num">70-85%</div><h5 className="mt-2">Handwriting reads</h5><p className="mb-0">Handwriting is read at about 70 to 85 percent. Low-confidence rows are highlighted for you to check, never guessed.</p></div></div>
-            <div className="col-md-4"><div className="card h-100 p-4"><div className="accuracy-num">Every grade</div><h5 className="mt-2">Approved by you</h5><p className="mb-0">Every result is a draft until you approve it. The teacher always makes the final call, on every paper.</p></div></div>
+          <div className="row g-4 align-items-stretch">
+            <div className="col-lg-6">
+              <div className="duo-card duo-purple h-100">
+                <p className="duo-eyebrow duo-eyebrow-light mb-2">Grading Accuracy</p>
+                <h2>Grades like a careful teacher, checked by you</h2>
+                <p className="mb-4">Every result is a draft. You review the grid, fix flagged reads and approve. The teacher always makes the final call.</p>
+                <div className="row g-3">
+                  <div className="col-6">
+                    <div className="duo-stat">
+                      <div className="duo-stat-num">Near-100%</div>
+                      <p className="mb-0">MCQ scored deterministically against your answer key.</p>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="duo-stat">
+                      <div className="duo-stat-num">70-85%</div>
+                      <p className="mb-0">Handwriting read rate. Low-confidence reads are flagged for you, never guessed.</p>
+                    </div>
+                  </div>
+                </div>
+                <a className="duo-link duo-link-amber mt-4" href="#how">See how grading works <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div id="security" className="duo-card duo-white h-100">
+                <span className="duo-starburst" aria-hidden="true">
+                  <svg width="64" height="64" viewBox="0 0 100 100" fill="none">
+                    <defs><linearGradient id="burstGrad" x1="0" y1="0" x2="100" y2="100"><stop stopColor="#F59E0B" /><stop offset="1" stopColor="#F97316" /></linearGradient></defs>
+                    <polygon fill="url(#burstGrad)" points="50,0 59,33 83,17 68,42 100,50 68,58 83,83 59,67 50,100 41,67 17,83 32,58 0,50 32,42 17,17 41,33" />
+                  </svg>
+                </span>
+                <p className="duo-eyebrow mb-2">Security &amp; Trust</p>
+                <h2>Your student and teacher data is <em>always</em> safe</h2>
+                <p>Student work is never used to train AI models. Only you see your students grades and feedback.</p>
+                <div className="d-flex flex-wrap gap-4 align-items-end">
+                  <ul className="duo-checklist list-unstyled mb-0">
+                    <li><CheckIcon size={18} /> Data never used to train AI</li>
+                    <li><CheckIcon size={18} /> Data never shared or sold</li>
+                    <li><CheckIcon size={18} /> Full teacher control</li>
+                    <li><CheckIcon size={18} /> Delete data any time</li>
+                    <li><CheckIcon size={18} /> First name and student ID only</li>
+                  </ul>
+                  <div className="duo-illustration" aria-hidden="true">
+                    <svg width="180" height="160" viewBox="0 0 180 160" fill="none">
+                      <defs>
+                        <linearGradient id="folderBack" x1="0" y1="0" x2="180" y2="120"><stop stopColor="#C4B5FD" /><stop offset="1" stopColor="#A78BFA" /></linearGradient>
+                        <linearGradient id="folderFront" x1="0" y1="0" x2="180" y2="120"><stop stopColor="#7C3AED" /><stop offset="1" stopColor="#4F46E5" /></linearGradient>
+                      </defs>
+                      <path d="M20 30h45l12 14h73a6 6 0 0 1 6 6v10H14V36a6 6 0 0 1 6-6z" fill="url(#folderBack)" />
+                      <rect x="34" y="18" width="52" height="66" rx="4" fill="#fff" stroke="#DDD6FE" />
+                      <path d="M42 32h36M42 42h36M42 52h24" stroke="#C4B5FD" strokeWidth="4" strokeLinecap="round" />
+                      <rect x="58" y="26" width="52" height="66" rx="4" fill="#fff" stroke="#DDD6FE" />
+                      <path d="M66 40h36M66 50h36M66 60h24" stroke="#C4B5FD" strokeWidth="4" strokeLinecap="round" />
+                      <rect x="82" y="34" width="52" height="66" rx="4" fill="#F5F3FF" stroke="#DDD6FE" />
+                      <path d="M90 48h36M90 58h36M90 68h24" stroke="#C4B5FD" strokeWidth="4" strokeLinecap="round" />
+                      <path d="M14 62h152l-8 82a8 8 0 0 1-8 7H30a8 8 0 0 1-8-7l-8-82z" fill="url(#folderFront)" />
+                      <circle cx="128" cy="118" r="26" fill="#fff" />
+                      <rect x="118" y="114" width="20" height="16" rx="3" fill="#4F46E5" />
+                      <path d="M122 114v-6a6 6 0 0 1 12 0v6" stroke="#4F46E5" strokeWidth="3" fill="none" />
+                      <circle cx="128" cy="121" r="2.5" fill="#fff" />
+                    </svg>
+                  </div>
+                </div>
+                <a className="duo-link duo-link-purple mt-4" href="#faq">Read our FERPA answers <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* Security and trust */}
-      <section id="security" className="container py-5">
-        <p className="eyebrow text-center mb-2">Security and trust</p>
-        <h2 className="text-center">Your student and teacher data is always safe</h2>
-        <p className="text-center text-muted">Student work is never used to train AI models. Only you see your students grades and feedback.</p>
-        <div className="row g-3 mt-3 text-center">
-          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon"><LockIcon size={32} /></div><h5 className="mt-2">Data never used to train AI</h5></div></div>
-          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon"><NoShareIcon size={32} /></div><h5 className="mt-2">Data never shared or sold</h5></div></div>
-          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon"><CheckCircleIcon size={32} /></div><h5 className="mt-2">Full teacher control</h5></div></div>
-          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon"><TrashIcon size={32} /></div><h5 className="mt-2">Delete data any time</h5></div></div>
-        </div>
-        <p className="text-center text-muted mt-4 mb-0">FERPA friendly: we store first name and student ID only, no email, no date of birth. A signed DPA is available, and you can delete a whole class set in one click.</p>
       </section>
 
       {/* Team */}
