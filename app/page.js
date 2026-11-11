@@ -4,6 +4,8 @@ import Link from "next/link";
 
 const NAV_LINKS = [
   { href: "#how", label: "How it works" },
+  { href: "#workflow", label: "Workflow" },
+  { href: "#security", label: "Security" },
   { href: "#free", label: "Free plan" },
   { href: "#team", label: "Team" },
   { href: "#faq", label: "FAQ" },
@@ -188,6 +190,92 @@ export default function Home() {
           <tr><td>EssayGrader</td><td>No, typed essays only</td><td>Free 100/mo, $14.99/mo</td></tr>
           <tr><td>MagicSchool</td><td>No, prep tools, not paper grading</td><td>Free, Plus $12.99/mo</td></tr>
         </tbody></table></div>
+      </section>
+
+
+      {/* Workflow: how it fits your grading workflow */}
+      <section id="workflow" className="section-alt py-5">
+        <div className="container">
+          <p className="eyebrow text-center mb-2">Your workflow</p>
+          <h2 className="text-center">How PaperGradeAI fits your grading workflow</h2>
+          <p className="text-center text-muted">No new system to learn, no LMS to connect. It slots into the way you already grade paper tests.</p>
+          <div className="row g-3 mt-3">
+            <div className="col-md-4"><div className="card h-100 p-4"><div className="step-num">1</div><h5 className="mt-3 text-center">Create the test with your key and rubric</h5><p className="mb-0">Add the subject, class and total marks, then the MCQ key, a model answer for short answers, and a pre-built STAAR, FSA, Regents or AP rubric, or write your own.</p></div></div>
+            <div className="col-md-4"><div className="card h-100 p-4"><div className="step-num">2</div><h5 className="mt-3 text-center">Upload the whole class at once</h5><p className="mb-0">Photograph the stack on your phone, or upload one class PDF. The tool splits it automatically, one paper per student, in name order. Student name and ID only.</p></div></div>
+            <div className="col-md-4"><div className="card h-100 p-4"><div className="step-num">3</div><h5 className="mt-3 text-center">Review, approve and export</h5><p className="mb-0">Check the draft grid, fix the flagged reads, approve, then print the mark sheet and export the CSV straight into your gradebook.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Handwritten work */}
+      <section id="handwriting" className="container py-5">
+        <p className="eyebrow text-center mb-2">Handwritten papers</p>
+        <h2 className="text-center">Can PaperGradeAI read handwritten work?</h2>
+        <p className="text-center text-muted">Yes. Paper tests are the whole point, not an afterthought.</p>
+        <div className="row g-3 mt-3">
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📱 Scan from anywhere</h5><p className="mb-0">Scan from a phone, a tablet or a school printer. A clear photo is enough to start.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📄 Upload the whole class at once</h5><p className="mb-0">Upload one PDF with the entire class set. PaperGradeAI separates it into one paper per student.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>✍️ Reads print and messy handwriting</h5><p className="mb-0">Print, cursive and messy handwriting are all read, then scored against your key and rubric.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>🚩 Flagged, never guessed</h5><p className="mb-0">Low-confidence reads are highlighted for you to check. Handwriting reads at about 70 to 85 percent, so nothing uncertain becomes a grade on its own.</p></div></div>
+        </div>
+      </section>
+
+      {/* Standards-aligned grading */}
+      <section id="standards" className="section-alt py-5">
+        <div className="container">
+          <p className="eyebrow text-center mb-2">Standards aligned</p>
+          <h2 className="text-center">Standards-aligned paper grading</h2>
+          <p className="text-center text-muted">Score each paper against your rubric while measuring the class against state standards.</p>
+          <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
+            <span className="rubric-chip">STAAR</span><span className="rubric-chip">FSA</span><span className="rubric-chip">Regents</span><span className="rubric-chip">AP</span>
+          </div>
+          <div className="row g-3 mt-3">
+            <div className="col-md-4"><div className="card h-100 p-4"><h5>📐 Pre-built rubrics</h5><p className="mb-0">Pick a STAAR, FSA, Regents or AP rubric when you create a test, instead of writing a rubric from scratch.</p></div></div>
+            <div className="col-md-4"><div className="card h-100 p-4"><h5>🎯 Rubric plus standards</h5><p className="mb-0">Every answer is scored against your rubric, and the class view shows how students are doing against the standard behind it.</p></div></div>
+            <div className="col-md-4"><div className="card h-100 p-4"><h5>🧮 Maths steps count too</h5><p className="mb-0">Maths answers earn partial credit step by step, not just for the final answer, so working is rewarded the way you would reward it.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Growth tracking */}
+      <section id="growth" className="container py-5">
+        <p className="eyebrow text-center mb-2">Student growth</p>
+        <h2 className="text-center">Track student growth, not just scores</h2>
+        <p className="text-center text-muted">A total tells you who passed. PaperGradeAI shows you what to teach next.</p>
+        <div className="row g-3 mt-3">
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📈 Class trends</h5><p className="mb-0">See how the whole class performed across the test, question by question, so patterns stand out at a glance.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>👩‍🎓 Per-student mastery</h5><p className="mb-0">Every student gets a mastery level, Mastered, Developing or Needs support, so you know who needs help first.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>❓ Most-missed questions</h5><p className="mb-0">The questions the class missed most are listed first, with the percentage who got each one right.</p></div></div>
+          <div className="col-md-6 col-lg-3"><div className="card h-100 p-3"><h5>📝 Reteach priority list</h5><p className="mb-0">Get a short reteach priority list and a printable worksheet for exactly the topics the class missed.</p></div></div>
+        </div>
+      </section>
+
+      {/* Accuracy, honestly */}
+      <section id="accuracy" className="section-alt py-5">
+        <div className="container">
+          <p className="eyebrow text-center mb-2">Accuracy, honestly</p>
+          <h2 className="text-center">Grades like a careful teacher, checked by you</h2>
+          <p className="text-center text-muted">No inflated accuracy claims. Here is exactly what the tool does, and where you stay in charge.</p>
+          <div className="row g-3 mt-3 text-center">
+            <div className="col-md-4"><div className="card h-100 p-4"><div className="accuracy-num">Near-100%</div><h5 className="mt-2">Multiple choice</h5><p className="mb-0">MCQ is scored deterministically against your answer key, so a legible answer is marked right every time.</p></div></div>
+            <div className="col-md-4"><div className="card h-100 p-4"><div className="accuracy-num">70-85%</div><h5 className="mt-2">Handwriting reads</h5><p className="mb-0">Handwriting is read at about 70 to 85 percent. Low-confidence rows are highlighted for you to check, never guessed.</p></div></div>
+            <div className="col-md-4"><div className="card h-100 p-4"><div className="accuracy-num">Every grade</div><h5 className="mt-2">Approved by you</h5><p className="mb-0">Every result is a draft until you approve it. The teacher always makes the final call, on every paper.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security and trust */}
+      <section id="security" className="container py-5">
+        <p className="eyebrow text-center mb-2">Security and trust</p>
+        <h2 className="text-center">Your student and teacher data is always safe</h2>
+        <p className="text-center text-muted">Student work is never used to train AI models. Only you see your students grades and feedback.</p>
+        <div className="row g-3 mt-3 text-center">
+          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon">🔒</div><h5 className="mt-2">Data never used to train AI</h5></div></div>
+          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon">🚫</div><h5 className="mt-2">Data never shared or sold</h5></div></div>
+          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon">✅</div><h5 className="mt-2">Full teacher control</h5></div></div>
+          <div className="col-6 col-md-3"><div className="card h-100 p-3 trust-badge"><div className="trust-icon">🗑️</div><h5 className="mt-2">Delete data any time</h5></div></div>
+        </div>
+        <p className="text-center text-muted mt-4 mb-0">FERPA friendly: we store first name and student ID only, no email, no date of birth. A signed DPA is available, and you can delete a whole class set in one click.</p>
       </section>
 
       {/* Team */}
