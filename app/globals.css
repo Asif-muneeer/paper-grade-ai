@@ -37,6 +37,7 @@ body { background: #f8f9fa; color: var(--brand-slate); }
 .hero-card { border: 0; border-radius: 1rem; }
 .step-num { width: 56px; height: 56px; margin: 0 auto; border-radius: 50%; background: linear-gradient(135deg, var(--brand-indigo), var(--brand-violet)); color: #fff; font-size: 1.5rem; font-weight: 700; line-height: 56px; }
 .avatar-circle { width: 72px; height: 72px; margin: 0 auto; border-radius: 50%; background: linear-gradient(135deg, var(--brand-indigo), var(--brand-violet)); color: #fff; font-size: 1.4rem; font-weight: 700; line-height: 72px; }
+.team-photo { width: 120px; height: 120px; margin: 0 auto; border-radius: 50%; object-fit: cover; border: 3px solid var(--brand-indigo); display: block; }
 .cta-band { background: linear-gradient(135deg, #3730A3, var(--brand-indigo) 55%, var(--brand-violet)); }
 .cta-band h2 { color: #fff; }
 
