@@ -34,6 +34,9 @@ body { background: #f8f9fa; color: var(--brand-slate); }
 .landing-nav .nav-link { color: var(--brand-slate); font-weight: 500; }
 .landing-nav .nav-link:hover { color: var(--brand-indigo); }
 .logo-mark { display: inline-flex; vertical-align: -0.25em; color: var(--brand-indigo); }
+.site-logo { height: 36px; width: auto; display: block; }
+.site-logo-footer { height: 30px; }
+.navbar-brand { padding-top: 0; padding-bottom: 0; }
 .brand-icon { display: inline-flex; vertical-align: -0.25em; margin-right: .35rem; color: var(--brand-indigo); }
 .navbar-dark .brand-icon { color: #fff; }
 .card-icon { color: var(--brand-indigo); display: inline-flex; vertical-align: -0.35em; margin-right: .45rem; }
