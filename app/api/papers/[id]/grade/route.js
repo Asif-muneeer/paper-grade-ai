@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { readDB, writeDB } from "@/lib/db";
 import { currentUser } from "@/lib/session";
 import { gradePaperWithAI, aiMode } from "@/lib/ai";
-// POST { answers? } — re-grades a paper (teacher may correct transcribed answers
+// POST { answers? }: re-grades a paper (teacher may correct transcribed answers
 // first). Returns draft grading + mode (demo/live). Never final: status stays
 // "graded" until the teacher approves it in the review grid.
 export async function POST(req, { params }) {
