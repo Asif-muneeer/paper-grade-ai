@@ -3,7 +3,7 @@ import { readDB } from "@/lib/db";
 import { currentUser } from "@/lib/session";
 import { feedbackForPaper, translateLine } from "@/lib/feedback";
 import { translateFeedback, aiMode } from "@/lib/ai";
-// GET /api/tests/[id]/feedback — per-student feedback EN + ES.
+// GET /api/tests/[id]/feedback: per-student feedback EN + ES.
 // Demo: template dictionary (English always shown alongside Spanish).
 // Live: OpenAI translates each line, falling back to templates on error.
 export async function GET(req, { params }) {
