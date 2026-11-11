@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LogoIcon } from "../components/icons";
 import { ARTICLES } from "./articles";
 
 export const metadata = { title: "Blog | PaperGradeAI", description: "Practical guides for US teachers: grading paper tests faster, rubrics, reteach worksheets and more." };
@@ -6,7 +7,7 @@ export const metadata = { title: "Blog | PaperGradeAI", description: "Practical 
 export default function BlogIndex() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom no-print"><div className="container"><a className="navbar-brand fw-bold" href="/">📄 PaperGradeAI</a><div className="ms-auto d-flex gap-2"><Link className="btn btn-outline-primary" href="/login">Log in</Link><Link className="btn btn-primary" href="/signup">Check 30 papers free</Link></div></div></nav>
+      <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom no-print"><div className="container"><a className="navbar-brand fw-bold" href="/"><span className="brand-icon"><LogoIcon size={20} /></span> PaperGradeAI</a><div className="ms-auto d-flex gap-2"><Link className="btn btn-outline-primary" href="/login">Log in</Link><Link className="btn btn-primary" href="/signup">Check 30 papers free</Link></div></div></nav>
       <div className="container py-5">
         <h1>Blog</h1>
         <p className="lead">Practical guides for US teachers who still grade on paper.</p>
