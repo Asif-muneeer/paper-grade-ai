@@ -104,3 +104,23 @@ body { background: #f8f9fa; color: var(--brand-slate); }
 @media print { .no-print { display: none !important; } body { background: #fff; } }
 
 /* Logo v1 deployed 2026-11-11 */
+
+/* Standards purple section, STAAR card layout */
+.standards-purple { background: linear-gradient(135deg, #6D28D9, #7C3AED 60%, #6D28D9); color: #fff; }
+.standards-purple h2, .standards-purple h5, .standards-purple strong { color: #fff; }
+.standards-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 2.5rem; }
+.staar-card { background: #fff; color: var(--brand-navy); border-radius: 1.25rem; box-shadow: 0 16px 40px rgba(15, 23, 42, .3); overflow: hidden; }
+.staar-card h5 { color: var(--brand-navy); }
+.staar-row { display: flex; align-items: center; gap: .75rem; background: #F5F3FF; border: 1px solid var(--brand-lavender-border); border-radius: .75rem; padding: .85rem 1rem; margin-bottom: .75rem; }
+.staar-row strong { color: var(--brand-navy); font-size: .95rem; }
+.staar-row-icon { color: var(--brand-violet); flex-shrink: 0; display: inline-flex; }
+.staar-check { width: 26px; height: 26px; border-radius: 50%; background: var(--brand-violet); color: #fff; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.staar-selected { color: var(--brand-violet); font-weight: 700; display: flex; align-items: center; gap: .35rem; }
+.staar-cta { display: flex; align-items: center; justify-content: center; gap: .5rem; background: #16A34A; color: #fff; font-weight: 700; text-decoration: none; border-radius: .75rem; padding: .9rem 1rem; }
+.staar-cta:hover { background: #15803D; color: #fff; }
+.standards-points li { display: flex; gap: .85rem; margin-bottom: 1.75rem; }
+.standards-point-check { color: #fff; flex-shrink: 0; margin-top: .15rem; }
+.standards-points p { color: rgba(255, 255, 255, .92); }
+.standards-purple .text-amber { color: #FCD34D; font-weight: 700; }
+.standards-deco { position: absolute; right: -10px; bottom: -10px; pointer-events: none; opacity: .9; }
+@media (max-width: 767px) { .standards-title { font-size: 2rem; } .standards-deco { display: none; } }

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { LogoIcon, PencilIcon, PenIcon, RubricIcon, ChatIcon, ChartIcon, TrendIcon, LayersIcon, ScanIcon, UploadIcon, FlagIcon, TargetIcon, CalculatorIcon, GradCapIcon, QuestionIcon, LockIcon, NoShareIcon, CheckCircleIcon, CheckIcon, TrashIcon, SparkleIcon, SunIcon } from "./components/icons";
+import { LogoIcon, PencilIcon, PenIcon, RubricIcon, ChatIcon, ChartIcon, TrendIcon, LayersIcon, ScanIcon, UploadIcon, FlagIcon, TargetIcon, CalculatorIcon, GradCapIcon, QuestionIcon, LockIcon, NoShareIcon, CheckCircleIcon, CheckIcon, TrashIcon, SparkleIcon, SunIcon, BookIcon, DocIcon } from "./components/icons";
 
 const NAV_LINKS = [
   { href: "#how", label: "How it works" },
@@ -225,20 +225,92 @@ export default function Home() {
       </section>
 
       {/* Standards-aligned grading */}
-      <section id="standards" className="section-alt py-5">
-        <div className="container">
-          <p className="eyebrow text-center mb-2">Standards aligned</p>
-          <h2 className="text-center">Standards-aligned paper grading</h2>
-          <p className="text-center text-muted">Score each paper against your rubric while measuring the class against state standards.</p>
-          <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
-            <span className="rubric-chip">STAAR</span><span className="rubric-chip">FSA</span><span className="rubric-chip">Regents</span><span className="rubric-chip">AP</span>
-          </div>
-          <div className="row g-3 mt-3">
-            <div className="col-md-4"><div className="card h-100 p-4"><h5><RubricIcon size={22} className="card-icon" /> Pre-built rubrics</h5><p className="mb-0">Pick a STAAR, FSA, Regents or AP rubric when you create a test, instead of writing a rubric from scratch.</p></div></div>
-            <div className="col-md-4"><div className="card h-100 p-4"><h5><TargetIcon size={22} className="card-icon" /> Rubric plus standards</h5><p className="mb-0">Every answer is scored against your rubric, and the class view shows how students are doing against the standard behind it.</p></div></div>
-            <div className="col-md-4"><div className="card h-100 p-4"><h5><CalculatorIcon size={22} className="card-icon" /> Maths steps count too</h5><p className="mb-0">Maths answers earn partial credit step by step, not just for the final answer, so working is rewarded the way you would reward it.</p></div></div>
+      <section id="standards" className="standards-purple py-5 position-relative overflow-hidden">
+        <div className="container py-4 position-relative">
+          <div className="row g-5 align-items-center">
+            <div className="col-lg-5">
+              <div className="staar-card">
+                <div className="d-flex align-items-center gap-3 px-4 pt-4 pb-3">
+                  <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                    <defs><clipPath id="txFlagClip"><circle cx="24" cy="24" r="24" /></clipPath></defs>
+                    <g clipPath="url(#txFlagClip)">
+                      <rect x="0" y="0" width="19" height="48" fill="#002868" />
+                      <rect x="19" y="0" width="29" height="24" fill="#FFFFFF" />
+                      <rect x="19" y="24" width="29" height="24" fill="#BF0A30" />
+                      <polygon fill="#FFFFFF" points="9.5,14 11.3,19.2 16.8,19.3 12.4,22.6 14,27.9 9.5,24.8 5,27.9 6.6,22.6 2.2,19.3 7.7,19.2" />
+                    </g>
+                  </svg>
+                  <div>
+                    <h5 className="mb-0">Texas STAAR</h5>
+                    <p className="mb-0 small text-muted">Select academic standards</p>
+                  </div>
+                </div>
+                <hr className="mx-4 my-0" />
+                <div className="p-4">
+                  <div className="staar-row">
+                    <span className="staar-row-icon"><DocIcon size={20} /></span>
+                    <div className="flex-grow-1">
+                      <strong>Ideas &amp; organisation</strong>
+                      <p className="mb-0 small text-muted">Clear controlling idea, logical order, introduction and conclusion.</p>
+                    </div>
+                    <span className="staar-check"><CheckIcon size={16} /></span>
+                  </div>
+                  <div className="staar-row">
+                    <span className="staar-row-icon"><BookIcon size={20} /></span>
+                    <div className="flex-grow-1">
+                      <strong>Evidence &amp; support</strong>
+                      <p className="mb-0 small text-muted">Relevant evidence from the text, explained not just quoted.</p>
+                    </div>
+                    <span className="staar-check"><CheckIcon size={16} /></span>
+                  </div>
+                  <div className="staar-row">
+                    <span className="staar-row-icon"><PenIcon size={20} /></span>
+                    <div className="flex-grow-1">
+                      <strong>Language &amp; conventions</strong>
+                      <p className="mb-0 small text-muted">Precise vocabulary, varied sentences, correct spelling and grammar.</p>
+                    </div>
+                    <span className="staar-check"><CheckIcon size={16} /></span>
+                  </div>
+                  <p className="small mt-3 mb-3 staar-selected"><CheckCircleIcon size={16} /> 3 standards selected</p>
+                  <Link href="/signup" className="staar-cta"><CheckCircleIcon size={20} /> Great! Your paper is being graded</Link>
+                  <p className="small text-muted mt-3 mb-0">From the STAAR: Texas ELA rubric in our library. FSA, Regents and AP rubrics work the same way.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-7">
+              <h2 className="standards-title">Standards-aligned paper grading</h2>
+              <ul className="list-unstyled standards-points mt-4">
+                <li>
+                  <span className="standards-point-check"><CheckIcon size={18} /></span>
+                  <div>
+                    <strong>Get rubric-aligned scores</strong>
+                    <p className="mb-0">Grade with pre-built <span className="text-amber">Texas STAAR</span>, Florida FSA, Regents and AP rubrics, picked when you create a test.</p>
+                  </div>
+                </li>
+                <li>
+                  <span className="standards-point-check"><CheckIcon size={18} /></span>
+                  <div>
+                    <strong>Measure student work against state standards</strong>
+                    <p className="mb-0">See how your class is performing against the standards in your rubric, question by question.</p>
+                  </div>
+                </li>
+                <li>
+                  <span className="standards-point-check"><CheckIcon size={18} /></span>
+                  <div>
+                    <strong>Spot learning gaps early</strong>
+                    <p className="mb-0">Compare class results with the rubric expectations and identify what to reteach, with a printable reteach worksheet, so you <span className="text-amber">spot learning gaps early</span>, before the next test.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        <span className="standards-deco" aria-hidden="true">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+            <path d="M60 10 C75 35 85 45 110 60 C85 75 75 85 60 110 C45 85 35 75 10 60 C35 45 45 35 60 10 Z" fill="#FDE68A" opacity="0.9" />
+            <circle cx="88" cy="88" r="16" fill="#7C3AED" />
+          </svg>
+        </span>
       </section>
 
       {/* Growth tracking */}
