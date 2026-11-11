@@ -20,8 +20,8 @@ export default function Home() {
       {/* Sticky professional navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top landing-nav">
         <div className="container">
-          <a className="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
-            <span className="logo-mark"><LogoIcon size={22} /></span> PaperGradeAI
+          <a className="navbar-brand d-flex align-items-center" href="/">
+            <img src="/logo.svg" alt="PaperGradeAI" className="site-logo" height="36" width="164" />
           </a>
           <button className="navbar-toggler" type="button" aria-label="Toggle navigation" onClick={() => setMenuOpen(!menuOpen)}>
             <span className="navbar-toggler-icon"></span>
@@ -321,7 +321,7 @@ export default function Home() {
         <div className="container">
           <div className="row g-4">
             <div className="col-md-3">
-              <h5><LogoIcon size={20} className="card-icon" /> PaperGradeAI</h5>
+              <h5><img src="/logo-light.svg" alt="PaperGradeAI" className="site-logo site-logo-footer" height="30" width="137" /></h5>
               <p className="small text-muted">Grade a class set of paper tests in 15 minutes, not Sunday night. Built for US K-12 teachers.</p>
             </div>
             <div className="col-md-3">
