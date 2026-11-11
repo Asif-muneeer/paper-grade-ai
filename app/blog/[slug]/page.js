@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LogoIcon } from "../../components/icons";
 import { ARTICLES, getArticle } from "../articles";
 
 export function generateStaticParams() {
@@ -12,7 +13,7 @@ export default function BlogArticle({ params }) {
   }
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom no-print"><div className="container"><a className="navbar-brand fw-bold" href="/">📄 PaperGradeAI</a><div className="ms-auto d-flex gap-2"><Link className="btn btn-outline-primary" href="/login">Log in</Link><Link className="btn btn-primary" href="/signup">Check 30 papers free</Link></div></div></nav>
+      <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom no-print"><div className="container"><a className="navbar-brand fw-bold" href="/"><span className="brand-icon"><LogoIcon size={20} /></span> PaperGradeAI</a><div className="ms-auto d-flex gap-2"><Link className="btn btn-outline-primary" href="/login">Log in</Link><Link className="btn btn-primary" href="/signup">Check 30 papers free</Link></div></div></nav>
       <div className="container py-5">
         <p><Link href="/blog">← Back to Blog</Link></p>
         <p className="small text-muted mb-1">{article.date} · PaperGradeAI Blog</p>
