@@ -45,32 +45,30 @@ export default function Home() {
       {/* Hero */}
       <header className="hero py-5">
         <div className="container py-4">
-          <div className="row align-items-center g-4">
-            <div className="col-lg-7">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6">
               <span className="badge bg-light text-primary mb-3 px-3 py-2">For US K-12 teachers</span>
               <h1 className="display-5 fw-bold">Grade a class set of paper tests in 15 minutes, not Sunday night.</h1>
               <p className="lead mt-3">Upload a student&apos;s solved paper as a photo or PDF. Get a draft result against your answer key and rubric. You approve every grade.</p>
               <div className="d-flex flex-wrap gap-2 mt-4">
-                <Link className="btn btn-light btn-lg" href="/signup">Check 30 papers free</Link>
-                <a className="btn btn-outline-light btn-lg" href="#how">See how it works</a>
+                <Link className="btn btn-primary btn-lg" href="/signup">Check 30 papers free</Link>
+                <a className="btn btn-outline-primary btn-lg" href="#how">See how it works</a>
               </div>
               <p className="mt-3 mb-0 small">No district sale required. No training on student data. Draft only, never a final grade alone.</p>
             </div>
-            <div className="col-lg-5">
-              <div className="card shadow hero-card text-dark">
-                <div className="card-body">
-                  <div className="d-flex justify-content-between align-items-center">
-                    <strong>Grade 7 Science: 7B</strong>
-                    <span className="badge bg-primary">Class avg 62%</span>
-                  </div>
-                  <hr />
-                  <div className="d-flex justify-content-between py-1"><span>Ava Johnson</span><span><strong>93%</strong> <span className="badge bg-success">Mastered</span></span></div>
-                  <div className="d-flex justify-content-between py-1"><span>Maya Patel</span><span><strong>64%</strong> <span className="badge bg-warning text-dark">Developing</span></span></div>
-                  <div className="d-flex justify-content-between py-1"><span>Liam Carter</span><span><strong>29%</strong> <span className="badge bg-danger">Needs support</span></span></div>
-                  <hr />
-                  <p className="mb-1 small text-muted">Most-missed question</p>
-                  <p className="mb-0"><strong>Q5, 52% correct.</strong> Reteach worksheet ready.</p>
+            <div className="col-lg-6">
+              <div className="hero-photo-wrap">
+                <img src="/hero-teacher.webp" alt="A US teacher grading handwritten paper tests with a red pen at a classroom desk" className="hero-photo" width="800" height="600" />
+                <span className="hero-amber-badge">15 minutes a class set</span>
+                <div className="hero-float-card hero-float-top">
+                  <span className="hero-float-label">Grade 7 Science, 7B</span>
+                  <strong>Class avg 62%</strong>
                 </div>
+                <div className="hero-float-card hero-float-bottom">
+                  <span className="hero-float-check"><CheckIcon /></span>
+                  <span><strong>Q5, 52% correct.</strong><br /><span className="small text-muted">Reteach worksheet ready.</span></span>
+                </div>
+                <div className="hero-float-pill">Ava Johnson <strong>93%</strong> <span className="badge bg-success">Mastered</span></div>
               </div>
             </div>
           </div>
