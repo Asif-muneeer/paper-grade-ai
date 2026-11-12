@@ -4,7 +4,7 @@ import { currentUser } from "@/lib/session";
 // GET CSV for one test: one row per approved/graded paper. Paste straight into
 // Google Classroom / Canvas / a school gradebook, no LMS integration needed.
 export async function GET(req, { params }) {
-  const { user, db } = currentUser();
+  const { user, db } = await currentUser();
   if (!user) return NextResponse.json({ error: "Not logged in" }, { status: 401 });
   const test = db.tests.find((t) => t.id === params.id && t.userId === user.id);
   if (!test) return NextResponse.json({ error: "Test not found" }, { status: 404 });

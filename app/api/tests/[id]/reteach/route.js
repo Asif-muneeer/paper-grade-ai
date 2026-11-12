@@ -8,7 +8,7 @@ import { reteachItemsLive, aiMode } from "@/lib/ai";
 // questions. Demo: deterministic templates (lib/reteach.js). Live: OpenAI
 // generates similar practice items, falling back to templates on error.
 export async function GET(req, { params }) {
-  const { user, db } = currentUser();
+  const { user, db } = await currentUser();
   if (!user) return NextResponse.json({ error: "Not logged in" }, { status: 401 });
   const test = db.tests.find((t) => t.id === params.id && t.userId === user.id);
   if (!test) return NextResponse.json({ error: "Test not found" }, { status: 404 });

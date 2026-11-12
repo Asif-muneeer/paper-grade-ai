@@ -4,7 +4,7 @@ import { currentUser } from "@/lib/session";
 import { planFor } from "@/lib/billing";
 import { aiMode as aiGradingMode } from "@/lib/ai";
 export async function GET() {
-  const { user, db } = currentUser();
+  const { user, db } = await currentUser();
   if (!user) return NextResponse.json({ error: "Not logged in" }, { status: 401 });
   const tests = db.tests.filter((t) => t.userId === user.id);
   const papers = db.papers.filter((p) => p.userId === user.id);

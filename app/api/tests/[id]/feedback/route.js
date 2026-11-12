@@ -7,7 +7,7 @@ import { translateFeedback, aiMode } from "@/lib/ai";
 // Demo: template dictionary (English always shown alongside Spanish).
 // Live: OpenAI translates each line, falling back to templates on error.
 export async function GET(req, { params }) {
-  const { user, db } = currentUser();
+  const { user, db } = await currentUser();
   if (!user) return NextResponse.json({ error: "Not logged in" }, { status: 401 });
   const test = db.tests.find((t) => t.id === params.id && t.userId === user.id);
   if (!test) return NextResponse.json({ error: "Test not found" }, { status: 404 });
